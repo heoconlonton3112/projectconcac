@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://5sgy0k2htp7b"]
+
+[ext_resource type="Texture2D" uid="uid://b4j24ob1501e" path="res://player/Sprites/ExamplePlayerSprite.png" id="1_4flbx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_edjgo"]
+
+[node name="Player" type="CharacterBody2D" unique_id=1880829678]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=933741223]
+shape = SubResource("CircleShape2D_edjgo")
+
+[node name="Sprite2d" type="Sprite2D" parent="." unique_id=1246338296]
+texture_filter = 1
+position = Vector2(1, -23)
+texture = ExtResource("1_4flbx")
+hframes = 21

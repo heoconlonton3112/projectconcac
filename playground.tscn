@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dusndod5kdk2g"]
+
+[ext_resource type="Texture2D" uid="uid://b4j24ob1501e" path="res://player/Sprites/ExamplePlayerSprite.png" id="1_rupst"]
+[ext_resource type="Script" uid="uid://bdejp2fnl7dnk" path="res://player/Script/scrpit.gd" id="1_wt17y"]
+[ext_resource type="PackedScene" uid="uid://iwmvfpst51xu" path="res://player/animation_player.tscn" id="3_m8u5f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_edjgo"]
+
+[node name="Playground" type="Node2D" unique_id=1006673822]
+position = Vector2(145, 187)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1580924157]
+script = ExtResource("1_wt17y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=650090365]
+shape = SubResource("CircleShape2D_edjgo")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=736757425]
+texture_filter = 1
+position = Vector2(1, -23)
+texture = ExtResource("1_rupst")
+hframes = 21
+frame = 1
+
+[node name="AnimationPlayer" parent="CharacterBody2D" unique_id=162515031 instance=ExtResource("3_m8u5f")]
